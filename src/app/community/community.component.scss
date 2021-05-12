@@ -1,0 +1,26 @@
+.community {
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 25px;
+        margin-top: 25px;
+        &__tab {
+            text-transform: uppercase;
+            font-size: 5vw;
+            font-family: 'Anton', cursive;
+            color:#d50000;
+            text-shadow: 2px 2px black;
+            transition: 0.25s;
+            cursor: pointer;
+            &:hover {
+                text-shadow: 4px 4px black;
+                // font-style: italic;
+            }
+        }
+    }
+
+    &__note {
+
+    }
+}

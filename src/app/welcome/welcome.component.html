@@ -1,0 +1,36 @@
+<div class="welcome">
+    <div class="welcome__side-content">
+        <div class="welcome__side-content__main-title">
+            <h1 class="welcome__side-content__main-title__title">Hội Bà Tám</h1>
+            <p class="welcome__side-content__main-title__subtitle">Nói đến sáng cũng không hết chuyện!</p>
+        </div>
+        <div class="welcome__side-content__group">
+            <div class="welcome__side-content__group__count">2,512</div>
+            <div class="welcome__side-content__group__name">HỘI</div>
+        </div>
+    </div>
+
+    <div class="welcome__side-content">
+        <div class="chat-box">
+            <div class="chat-box__list">
+                <ng-container *ngIf="pendingMessages">
+                    <ng-template ngFor let-message let-i='index' [ngForOf]='messages'>
+                        <div class="chat-box__list__message" [class.diff]="message.side == 'right'">
+                            <small>{{message.side == 'right' ? 'Bạn' : 'Người dưng'}}</small>
+                            <p>{{message.content}}</p>
+                        </div>
+                    </ng-template>
+                </ng-container>
+            </div>
+            <div class="chat-box__input">
+                <p #input>
+                    
+                </p>
+                <div class="chat-box__input__join" routerLink="/community">
+                    Tham gia
+                </div>
+            </div>
+            <!-- {{messages | json}} -->
+        </div>
+    </div>
+</div>
