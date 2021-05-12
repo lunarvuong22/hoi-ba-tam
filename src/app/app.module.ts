@@ -7,6 +7,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { CommunityComponent } from './community/community.component';
 import { CreateComponent } from './community/create/create.component';
 import { JoinComponent } from './community/join/join.component';
+import { AuthComponent } from './community/auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { JoinComponent } from './community/join/join.component';
     WelcomeComponent,
     CommunityComponent,
     CreateComponent,
-    JoinComponent
+    JoinComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,

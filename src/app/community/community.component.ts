@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./community.component.scss']
 })
 export class CommunityComponent implements OnInit {
+  isAuthenticated:boolean = false;
+  user:object;
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
+  setAuthentication = (payload:any) : void => {
+    this.isAuthenticated = payload.isAuthenticated;
+    this.user = payload.user;
+  }
 }
