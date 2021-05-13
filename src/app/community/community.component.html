@@ -1,20 +1,17 @@
 <div class="community">
     <div class="community__nav">
-        <ng-container *ngIf="isAuthenticated">
-            <div class="community__nav__tab" routerLink="./create">
+        <ng-container>
+            <div class="community__nav__tab" routerLink="./groups" routerLinkActive="active">
+                Các-hội
+            </div>
+            <div class="community__nav__tab" routerLink="./create" routerLinkActive="active">
                 Tạo-mới
             </div>
-            <div class="community__nav__tab" routerLink="./join">
+            <div class="community__nav__tab" routerLink="./join" routerLinkActive="active">
                 Tham-gia
             </div>
         </ng-container>
-        <ng-container *ngIf="!isAuthenticated">
-            <div class="community__nav__tab">
-                Bạn chưa đăng-nhập
-            </div>
-        </ng-container>
     </div>
-    <app-auth [isAuthenticated]="isAuthenticated" (setAuthentication)="setAuthentication($event)"></app-auth>
     <div class="community__content">
         <router-outlet></router-outlet>
     </div>

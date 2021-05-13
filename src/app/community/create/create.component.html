@@ -1,1 +1,11 @@
-<p>create works!</p>
+<div class="create">
+    <form class="create__form">
+        <div class="create__form__group">
+            <label class="create__form__group__label">Chủ đề</label>
+            <input class="create__form__group__input" type="text" name="topic" placeholder="của bạn là gì?" [(ngModel)]="data.topic"/>
+        </div>
+        <div class="create__form__submit" (click)="onSubmitForm()">
+            Tạo
+        </div>
+    </form>
+</div>

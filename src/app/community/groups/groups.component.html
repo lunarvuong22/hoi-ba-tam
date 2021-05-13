@@ -1,0 +1,14 @@
+
+<div class="groups">
+    <div class="groups__list">
+        <ng-template ngFor let-group let-i="index" [ngForOf]="data">
+            <div class="groups__list__group">
+                <div class="groups__list__group__topic">{{group.topic}}</div>
+                <div class="groups__list__group__date">{{group.date | date:'dd/MM/yyyy - h:m:s:a'}}</div>
+            </div>
+        </ng-template>
+    </div>
+    <div class="groups__count">
+        <p>Tổng cộng <span>{{totalGroupsCount}}</span> hội.</p>
+    </div>
+</div>

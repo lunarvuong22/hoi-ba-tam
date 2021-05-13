@@ -1,0 +1,47 @@
+.create {
+    display: flex;
+    justify-content: center;
+    &__form {
+        &__group {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 10px;
+            &__label {
+                font-size: 30pt;
+                font-family: 'Anton',cursive;
+                text-shadow: 3px 3px white;
+            }
+
+            &__input {
+                background:none;
+                border:none;
+                font-size: 30pt;
+                font-family: 'Anton',cursive;
+                background: #d50000;
+                box-shadow: 4px 4px black;
+                color:#f4b800;
+                text-indent: 10px;
+                caret-color: black;
+                text-shadow: 3px 3px black;
+                // border-bottom: 3px dashed black;
+                // border-bottom: 3px solid black;
+                font-style: italic;
+                &:focus {
+                    border:none;
+                    outline: none;
+                }
+            }
+        }
+
+        &__submit {
+            font-size: 40pt;
+            font-family: 'Anton',cursive;
+            text-shadow: 3px 3px black;
+            color:#d50000;
+            cursor:pointer;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

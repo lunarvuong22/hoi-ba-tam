@@ -1,0 +1,36 @@
+.groups {
+    padding: 25px;
+
+    &__count {
+        font-family: 'Anton',cursive;
+        font-size: 32pt;
+        margin-top: 20px;
+        text-shadow: 3px 3px white;
+        span {
+            color: #d50000;
+            text-shadow: 3px 3px black;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 15px;
+        row-gap: 15px;
+        &__group {
+            background: #d50000;
+            box-shadow: 4px 4px black;
+            padding: 5px;
+            font-family: 'Anton', cursive;
+            &__topic {
+                font-size: 16pt;
+                color:#f4b800;
+                text-shadow: 3px 3px black;
+            }
+    
+            &__date {
+                text-shadow: 1px 1px white;
+            }
+        }
+    }
+}

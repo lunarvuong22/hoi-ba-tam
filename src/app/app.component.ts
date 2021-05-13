@@ -21,7 +21,6 @@ export class AppComponent implements OnInit {
       });
         
       FB.AppEvents.logPageView();   
-        
     };
   
     (function(d, s, id){
@@ -31,5 +30,6 @@ export class AppComponent implements OnInit {
        js.src = "https://connect.facebook.net/en_US/sdk.js";
        fjs.parentNode.insertBefore(js, fjs);
      }(document, 'script', 'facebook-jssdk'));
+
   }
 }

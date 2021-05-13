@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterContentInit, Component,DoCheck,OnInit} from '@angular/core';
+declare var FB:any;
 
 @Component({
   selector: 'app-community',
@@ -7,16 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommunityComponent implements OnInit {
   isAuthenticated:boolean = false;
-  user:object;
 
   constructor() { }
 
-  ngOnInit(): void {
-
+  ngOnInit() {
   }
 
-  setAuthentication = (payload:any) : void => {
-    this.isAuthenticated = payload.isAuthenticated;
-    this.user = payload.user;
+  setAuthentication = (isAuthenticated:boolean) : void => {
+    this.isAuthenticated = isAuthenticated;
   }
 }

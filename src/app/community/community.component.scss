@@ -5,6 +5,11 @@
         justify-content: center;
         column-gap: 25px;
         margin-top: 25px;
+        .active {
+            text-shadow: 4px 4px black;
+            // box-shadow: 4px 4px black;
+        }
+
         &__tab {
             text-transform: uppercase;
             font-size: 5vw;
@@ -19,8 +24,7 @@
             }
         }
     }
-
-    &__note {
-
+    &__content {
+        padding-top: 50px;
     }
 }

@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnChanges, ViewChild } from '@angular/core';
+import { GroupService } from '../services/group.service';
 
 @Component({
   selector: 'app-welcome',
@@ -9,6 +10,7 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 export class WelcomeComponent implements AfterViewInit {
   @ViewChild('input') input:ElementRef;
+  totalGroupsCount:number = 0;
   
   pendingMessages = [
     { side:'left', content: 'Chào bạn!'},
@@ -23,13 +25,16 @@ export class WelcomeComponent implements AfterViewInit {
   ]
   messages = [];
 
-  constructor() { 
+  constructor(private groupSerice:GroupService) { 
+    this.groupSerice.getTotalGroupsCount().then(snap => {
+      this.totalGroupsCount = snap.size;
+    });
   }
   
   ngAfterViewInit() {
     const queue = async () => {
       for (const message of this.pendingMessages) {
-        const result = await new Promise(resolve => {
+        this.messages.push(await new Promise(resolve => {
           let charIndex = 0;
           const interval = setInterval(() => {
             if (message.side == 'right') {
@@ -48,8 +53,7 @@ export class WelcomeComponent implements AfterViewInit {
               },1000);
             }
           },50);
-        });
-        this.messages.push(result);
+        }));
       }
     }
     queue();
